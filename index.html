@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <section class="sectionOne">
-        <p id="resultScreen">Calculatrice</p>
+    <div class="chiffres">
+        <p id="affichage">Calculatrice</p>
+    </div>
+    <main>
+        <div>
+            <button onclick="calculatrice.verifierValeurs('7')">7</button>
+            <button onclick="calculatrice.verifierValeurs('8')">8</button>
+            <button onclick="calculatrice.verifierValeurs('9')">9</button>
+        </div>
+        <div>
+            <button onclick="calculatrice.verifierValeurs('4')">4</button>
+            <button onclick="calculatrice.verifierValeurs('5')">5</button>
+            <button onclick="calculatrice.verifierValeurs('6')">6</button>
+        </div>
+        <div>
+            <button onclick="calculatrice.verifierValeurs('1')">1</button>
+            <button onclick="calculatrice.verifierValeurs('2')">2</button>
+            <button onclick="calculatrice.verifierValeurs('3')">3</button>
+        </div>
+        <div class="bouton_0">
+            <button onclick="calculatrice.verifierValeurs('0')">0</button>
+        </div>
+    </main>
+    <section>
+        <div class="operateur">
+            <button onclick="calculatrice.verifierOperateur('+')">+</button>
+            <button onclick="calculatrice.verifierOperateur('-')">-</button>
+            <button onclick="calculatrice.verifierOperateur('*')">*</button>
+            <button onclick="calculatrice.verifierOperateur('/')">/</button>
+            <button onclick="calculatrice.operation()">=</button>
+        </div>
     </section>
-        <main class="main">
-            <div class="frame1">
-                <button onclick="calculatrice.sev()">7</button>
-                <button onclick="calculatrice.eig()">8</button>
-                <button onclick="calculatrice.nin()">9</button>
-            </div>
-            <div class="frame2">
-                <button onclick="calculatrice.fou()">4</button>
-                <button onclick="calculatrice.fiv()">5</button>
-                <button onclick="calculatrice.six()">6</button>
-            </div>
-            <div class="frame3">
-                <button onclick="calculatrice.one()">1</button>
-                <button onclick="calculatrice.two()">2</button>
-                <button onclick="calculatrice.thr()">3</button>
-            </div>
-            <div class="frame4">
-                <button onclick="calculatrice.zer()">0</button>
-            </div>
-        </main>
-            <section class="sectionTwo">
-                <div class="frame5">
-                    <button onclick="calculatrice.adi()" class="op">+</button>
-                    <button onclick="calculatrice.sou()" class="op">-</button>
-                    <button onclick="calculatrice.mul()" class="op">*</button>
-                    <button onclick="calculatrice.div()" class="op">/</button>
-                    <button onclick="calculatrice.res()" class="op">=</button>
-                </div>
-            </section>
     <script src="script.js"></script>
 </body>
+
 </html>
