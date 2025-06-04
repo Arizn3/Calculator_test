@@ -22,21 +22,37 @@ class calculatrice {
     }
     //FONCTION STATIQUE POUR RESULTAT
     static operation() {
-        if (this.operateur == '+') {
-            this.resultat = parseInt(calculatrice.valeur_A) + parseInt(calculatrice.valeur_B);
+        switch (this.operateur) {
+            case "+":
+                this.resultat = parseInt(calculatrice.valeur_A) + parseInt(calculatrice.valeur_B);
+                document.getElementById('affichage').textContent = this.valeur_A + ' ' + this.operateur + ' ' + this.valeur_B + ' = ' + this.resultat;
+                this.valeur_A = '';
+                this.valeur_B = '';
+                this.operateur = '';
+                break;
+            case "-":
+                this.resultat = parseInt(calculatrice.valeur_A) - parseInt(calculatrice.valeur_B);
+                document.getElementById('affichage').textContent = this.valeur_A + ' ' + this.operateur + ' ' + this.valeur_B + ' = ' + this.resultat;
+                this.valeur_A = '';
+                this.valeur_B = '';
+                this.operateur = '';
+                break;
+            case "*":
+                this.resultat = parseInt(calculatrice.valeur_A) * parseInt(calculatrice.valeur_B);
+                document.getElementById('affichage').textContent = this.valeur_A + ' ' + this.operateur + ' ' + this.valeur_B + ' = ' + this.resultat;
+                this.valeur_A = '';
+                this.valeur_B = '';
+                this.operateur = '';
+                break;
+            case "/":
+                this.resultat = parseInt(calculatrice.valeur_A) / parseInt(calculatrice.valeur_B);
+                document.getElementById('affichage').textContent = this.valeur_A + ' ' + this.operateur + ' ' + this.valeur_B + ' = ' + this.resultat;
+                this.valeur_A = '';
+                this.valeur_B = '';
+                this.operateur = '';
+                break;
+            default:
+                break;
         }
-        else if (this.operateur == '-') {
-            this.resultat = parseInt(calculatrice.valeur_A) - parseInt(calculatrice.valeur_B);
-        }
-        else if (this.operateur == '*') {
-            this.resultat = parseInt(calculatrice.valeur_A) * parseInt(calculatrice.valeur_B);
-        }
-        else if (this.operateur == '/') {
-            this.resultat = parseInt(calculatrice.valeur_A) / parseInt(calculatrice.valeur_B);
-        }
-        document.getElementById('affichage').textContent = this.valeur_A + ' ' + this.operateur + ' ' + this.valeur_B + ' = ' + this.resultat;
-        this.valeur_A = '';
-        this.valeur_B = '';
-        this.operateur = '';
     }
 }
